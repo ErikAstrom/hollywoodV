@@ -9,10 +9,26 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        headingOne:'60px',
+        headingThree:'48px',
+        headingOneMobile:'40px',
+        headingTwoMobile:'60px',
+        headingOneMobile:'36px',
+        body:'24px',
+        bodyMobile:'24px',
+        button:'20x',
+        buttonMobile:'18px',
+      },
       colors: {
         brandblue: colors.blue[500],
         brandred: colors.red[500],
+        canary:'#E0D62D',
+        pebble:'#35383E',
+        ivory:'#F3F3F3',
+        blackDiamond:'#35383E'
       },
+      
     },
   },
   plugins: [],

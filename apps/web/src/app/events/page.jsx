@@ -19,9 +19,9 @@ export default async function Events() {
             return <div key={i} className='flex flex-col text-zinc-900 border-2 border-zinc-900 rounded'>
             <img className='h-[200px]' src={urlFor(item.image).url()} />
                 <div  className='p-5'>
-                <h2 className='text-2xl font-bold'>{item.title}</h2>
+                <h2 className='text-2xl font-bold'>{item?.title}</h2>
                 <p className='text-lg'>{item.description}</p>
-                <Link className='pl-5 hover:font-bold' href={`/events/${item.slug?.current}`}> -{'>'} Go to event</Link>
+                <Link className='pl-5 hover:font-bold' href={`/events/${item?.slug?.current}`}> -{'>'} Go to event</Link>
                 </div>
             </div>
          })}   

@@ -1,12 +1,20 @@
 import sanityClient from "../sanity/config"
 import Link from "next/link"
+import Hero from "./hero";
+
 export default async function Home() {
-    // const data = await sanityClient.fetch(`*[]`);
+    const data = await sanityClient.fetch(`*[_type == "page" && slug.current == "startsida"]`);
+
+    const { sections } = data[0];
+
     return (
-  <div> 
-    <div className='text-xl'>Hello home</div> 
-        <Link className='m-10' href={'/events'}>Events</Link>
-  </div>
+  <main> 
+    {sections && sections.map((section, i) => {
+      return (
+        section.type = 'hero' && <Hero data={section} key={i}/>
+      )
+    })}
+  </main>
     )
   }
   

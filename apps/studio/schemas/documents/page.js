@@ -21,5 +21,13 @@ export default {
         name: "pageMeta",
         type: "meta",
       },
+      {
+        name: "sections",
+        type: "array",
+        title: "Page sections",
+        of: [
+          { type: "hero" },
+        ],
+      },
     ],
   };

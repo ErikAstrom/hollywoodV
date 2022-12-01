@@ -5,6 +5,7 @@ import page from './documents/page'
 import meta from './objects/shared/meta'
 import config from './documents/config'
 import event from './documents/event'
+import hero from './objects/hero'
 // Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
@@ -22,6 +23,7 @@ export default createSchema({
     event,
 //Objects
     meta,
-    figure
+    figure,
+    hero
   ]),
 })
