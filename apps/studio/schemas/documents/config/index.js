@@ -40,13 +40,6 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      title: "Logo",
-      name: "logo",
-      type: "image",
-      group: "general",
-      validation: (Rule) => Rule.required(),
-    },
-    {
         title: "Footertext",
         name: "footerText",
         type: "text",
@@ -54,12 +47,24 @@ export default {
         validation: (Rule) => Rule.required(),
     },
     {
-        title: "Headertext",
-        name: "headerText",
-        type: "text",
+        title: "Header Logo",
+        name: "headerLogo",
+        type: "figure",
         group: "header",
         validation: (Rule) => Rule.required(),
-    }
+    },
+    {
+      title: "Links",
+      name: "links",
+      type: "array",
+      group: "header",
+      of:[
+        {
+          type:'link'
+        }
+      ],
+      validation: (Rule) => Rule.required().max(4),
+  }
   ],
   preview: {
     prepare() {

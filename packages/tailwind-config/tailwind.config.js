@@ -21,8 +21,6 @@ module.exports = {
         buttonMobile:'18px',
       },
       colors: {
-        brandblue: colors.blue[500],
-        brandred: colors.red[500],
         canary:'#E0D62D',
         pebble:'#35383E',
         ivory:'#F3F3F3',

@@ -10,6 +10,6 @@ html {
 }
 @layer components {
     .spacing {
-      /* @apply px-md-pxl pt-xl-pxl pb-xl-pxl md:pt-2xl-pxl md:pb-2xl-pxl max-w-desktop; */
+      @apply px-[32px] max-w-[1502px] mx-auto w-full;
     }
   }

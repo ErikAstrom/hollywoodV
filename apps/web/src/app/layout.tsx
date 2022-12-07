@@ -1,7 +1,7 @@
 import '../styles/globals.css';
-
 import sanityClient from '../sanity/config'
-
+import Header from '../sections/Header';
+import Footer from '../sections/layout/footer/Index';
 export default async function RootLayout({
   children,
 }: {
@@ -9,7 +9,7 @@ export default async function RootLayout({
 }) {
 
     const data = await sanityClient.fetch(`*[_type == "config"]`);
-    // console.log(data)
+
   return (
     <html lang="en">
       {/*
@@ -17,7 +17,11 @@ export default async function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head/>
-      <body>{children}</body>
+      <body>
+      <Header/>
+        {children}
+        <Footer/>
+        </body>
     </html>
   )
 }
