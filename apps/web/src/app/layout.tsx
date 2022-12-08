@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import sanityClient from '../sanity/config'
-import Header from '../sections/Header';
+import Header from '../sections/header';
 import Footer from '../sections/layout/footer/Index';
 export default async function RootLayout({
   children,

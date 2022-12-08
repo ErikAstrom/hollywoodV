@@ -30,7 +30,7 @@ export default {
                 },
                 {
                     type:'string',
-                    name:'internalText',
+                    name:'externalText',
                     title:'Link text',
                     description:'What the link will be displayed as, i.e "Click here", "Read more"',
                     validation: (Rule) => Rule.required(),
@@ -52,7 +52,7 @@ export default {
                 {
                     title:'Link text',
                     type:'string',
-                    name:'externalText',
+                    name:'internalText',
                     description:'What the link will be displayed as, i.e "Click here", "Read more"',
                     validation: (Rule) => Rule.required(),
                 }
