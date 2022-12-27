@@ -10,6 +10,6 @@ html {
 }
 @layer components {
     .spacing {
-      @apply px-[32px] max-w-[1502px] mx-auto w-full;
+      @apply px-[32px] py-[80px] max-w-[1502px] mx-auto w-full;
     }
   }

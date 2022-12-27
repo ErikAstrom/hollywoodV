@@ -10,6 +10,7 @@ import link from './objects/shared/link'
 // Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 import button from './objects/shared/button'
+import services from './objects/services'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -27,6 +28,7 @@ export default createSchema({
     meta,
     figure,
     hero,
+    services,
 
 //Layout
     link,

@@ -27,6 +27,7 @@ export default {
         title: "Page sections",
         of: [
           { type: "hero" },
+          { type: "services" },
         ],
       },
     ],
