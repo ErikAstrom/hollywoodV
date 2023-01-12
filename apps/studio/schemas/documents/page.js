@@ -28,6 +28,8 @@ export default {
         of: [
           { type: "hero" },
           { type: "services" },
+          { type: "preview" },
+          { type: "logos" },
         ],
       },
     ],

@@ -2,6 +2,8 @@ import sanityClient from "../sanity/config";
 import Link from "next/link";
 import Hero from "../sections/hero";
 import Services from "../sections/services";
+import Preview from "../sections/preview";
+import LogoSection from "../sections/logosSection";
 
 export default async function Home() {
   const data =
@@ -75,7 +77,63 @@ export default async function Home() {
                },
      
           },
-       }
+       },
+       _type == "preview" => {
+        title,
+        label,
+        description,
+        background,
+        video,
+        image {
+          alt,
+          asset -> {
+            url,
+          }
+        },
+        video{
+          ...,
+          asset->{
+              url,
+          }
+        }, 
+        btn1 {
+          ...,
+          btnlink {
+          ...,
+            internalLink-> {
+             _type,
+             slug {
+             _type,
+             current
+        }
+        }
+        }
+        },
+        btn2 {
+          ...,
+          btnlink {
+          ...,
+            internalLink-> {
+             _type,
+             slug {
+             _type,
+             current
+        }
+        }
+        }
+        }
+      },
+      _type == "logos" => { 
+        backgroundColor,
+        title,
+        logoArray[] {
+          alt,
+          asset -> {
+          url
+        }
+          
+        }
+        }
       }
     }`);
 
@@ -89,6 +147,10 @@ export default async function Home() {
             <Hero section={section} key={i} />
           ) : section._type === "services" ? (
             <Services section={section} key={i} />
+          ) : section._type === "preview" ? (
+            <Preview section={section} key={i} />
+          ) : section._type === "logos" ? (
+            <LogoSection section={section} key={i} />
           ) : null;
         })}
     </main>

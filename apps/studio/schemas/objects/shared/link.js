@@ -36,7 +36,7 @@ export default {
       title: "Link text",
       description:
         'What the link will be displayed as, i.e "Click here", "Read more"',
-      validation: (Rule) => Rule.required(),
+      // validation: (Rule) => Rule.required(),
     },
     {
       title: "Target",

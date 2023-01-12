@@ -11,7 +11,7 @@ export const Services = ({ section }) => {
   return (
     <section className="spacing flex flex-col">
         <span className="text-body font-bold">{label}</span>
-        <h2 className="text-headingThree mb-[150px]">
+        <h2 className="text-headingThree mb-[100px]">
             {title}
         </h2>
         <div className="w-full flex flex-row justify-between">
