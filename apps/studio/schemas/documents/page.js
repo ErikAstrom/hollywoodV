@@ -30,6 +30,7 @@ export default {
           { type: "services" },
           { type: "preview" },
           { type: "logos" },
+          { type: "contact" },
         ],
       },
     ],

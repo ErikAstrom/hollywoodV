@@ -4,6 +4,7 @@ import Hero from "../sections/hero";
 import Services from "../sections/services";
 import Preview from "../sections/preview";
 import LogoSection from "../sections/logosSection";
+import Contact from "../sections/contactSection";
 
 export default async function Home() {
   const data =
@@ -129,12 +130,16 @@ export default async function Home() {
         logoArray[] {
           alt,
           asset -> {
-          url
+            url
+           }
         }
-          
-        }
-        }
+      },
+      _type == "contact" => {
+        title,
+        label,
+        description
       }
+      },
     }`);
 
   const { sections } = data[0];
@@ -151,6 +156,8 @@ export default async function Home() {
             <Preview section={section} key={i} />
           ) : section._type === "logos" ? (
             <LogoSection section={section} key={i} />
+          ) : section._type === "contact" ? (
+            <Contact section={section} key={i} />
           ) : null;
         })}
     </main>

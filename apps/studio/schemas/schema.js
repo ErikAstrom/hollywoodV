@@ -13,6 +13,7 @@ import button from './objects/shared/button'
 import services from './objects/services'
 import preview from './objects/preview'
 import logos from './objects/logos'
+import contact from './objects/contact'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -32,6 +33,7 @@ export default createSchema({
     services,
     preview,
     logos,
+    contact,
 //Layout
     link,
     button
