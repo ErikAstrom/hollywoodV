@@ -3,18 +3,18 @@ export default {
   type: "document",
   title: "Site Configuration",
   groups: [
-      {
-        name: 'general',
-        title: 'GENERAL',
-      },
-      {
-        name: 'header',
-        title: 'HEADER',
-      },
     {
-      name: 'footer',
-      title: 'FOOTER',
-    }
+      name: "general",
+      title: "GENERAL",
+    },
+    {
+      name: "header",
+      title: "HEADER",
+    },
+    {
+      name: "footer",
+      title: "FOOTER",
+    },
   ],
   fields: [
     {
@@ -40,31 +40,43 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-        title: "Footertext",
-        name: "footerText",
-        type: "text",
-        group: "footer",
-        validation: (Rule) => Rule.required(),
+      name: "footerlogo",
+      type: "figure",
+      description: "Logo in the footer",
+      title: "Logo",
+      group: "footer",
     },
     {
-        title: "Header Logo",
-        name: "headerLogo",
-        type: "figure",
-        group: "header",
-        validation: (Rule) => Rule.required(),
+      title: "Footer Links",
+      name: "footerlinks",
+      type: "array",
+      group: "footer",
+      of: [
+        {
+          type: "link",
+        },
+      ],
+      validation: (Rule) => Rule.required().max(4),
+    },
+    {
+      title: "Header Logo",
+      name: "headerLogo",
+      type: "figure",
+      group: "header",
+      validation: (Rule) => Rule.required(),
     },
     {
       title: "Links",
       name: "links",
       type: "array",
       group: "header",
-      of:[
+      of: [
         {
-          type:'link'
-        }
+          type: "link",
+        },
       ],
       validation: (Rule) => Rule.required().max(4),
-  }
+    },
   ],
   preview: {
     prepare() {

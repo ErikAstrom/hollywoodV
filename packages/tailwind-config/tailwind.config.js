@@ -24,9 +24,15 @@ module.exports = {
         canary:'#E0D62D',
         pebble:'#35383E',
         ivory:'#F3F3F3',
-        blackDiamond:'#35383E'
+        blackDiamond:'#35383E',
+        midGrey:'#C2C2C2',
+        lightGrey:'#E7E7E7',
+        lightestGrey:'#F1F1F1'
       },
-      
+      // screens: {
+      //   'sm': {'max': '639px'},
+      //   // => @media (max-width: 639px) { ... }
+      // }
     },
   },
   plugins: [],

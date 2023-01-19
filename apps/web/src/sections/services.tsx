@@ -9,12 +9,14 @@ export const Services = ({ section }) => {
       } = section;
 
   return (
-    <section className="spacing flex flex-col">
-        <span className="text-body font-bold">{label}</span>
-        <h2 className="text-headingThree mb-[100px]">
+    <section className="md:spacing">
+        <div className="px-[32px] py-[80px] md:py-0 md:px-0 flex flex-col">
+        <span className="text-center md:text-left text-body font-bold">{label}</span>
+        <h2 className="text-center md:text-left text-headingThree">
             {title}
         </h2>
-        <div className="w-full flex flex-row justify-between">
+        </div>
+        <div className="w-full flex flex-col md:grid md:grid-cols-3 md:gap-[41px]">
         {cardArray.map((card, i)=> {
             return <Card card={card} bgIndex={i} key={i}/> 
         })}

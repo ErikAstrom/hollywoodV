@@ -10,7 +10,7 @@ export const Contact = ({ section }) => {
 
 
     return (
-        <section className="py-[80px] bg-canary">
+        <section className="bg-canary">
             <div className="text-center flex flex-col justify-between md:w-[674px] mx-auto spacing">
              <span className="text-body font-bold">{label}</span>
             <h1 className="text-headingThree">{title}</h1>

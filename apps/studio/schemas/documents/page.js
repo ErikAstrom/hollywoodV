@@ -31,6 +31,7 @@ export default {
           { type: "preview" },
           { type: "logos" },
           { type: "contact" },
+          { type: "quotes" },
         ],
       },
     ],

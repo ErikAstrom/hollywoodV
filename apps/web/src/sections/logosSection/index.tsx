@@ -18,7 +18,7 @@ export const LogoSection = ({ section }) => {
             backgroundColor === "canary" && "bg-canary",
         )}>
             <div className="spacing flex flex-col">
-                <h2 className="text-headingThree mb-[100px]">
+                <h2 className="text-headingThree mb-[100px] text-center md:text-left">
                 {title}
                 </h2>
             <LogoArray array={logoArray}/>

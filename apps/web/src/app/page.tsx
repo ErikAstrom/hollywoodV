@@ -5,6 +5,7 @@ import Services from "../sections/services";
 import Preview from "../sections/preview";
 import LogoSection from "../sections/logosSection";
 import Contact from "../sections/contactSection";
+import QuoteSection from "../sections/quoteSection";
 
 export default async function Home() {
   const data =
@@ -138,12 +139,20 @@ export default async function Home() {
         title,
         label,
         description
-      }
+      },
+      _type == "quotes" => { 
+        title,
+        backgroundColor,
+        quoteArray[] {
+          quoteauthor,
+          quotetext,
+        }
+        
+        }
       },
     }`);
 
   const { sections } = data[0];
-
   return (
     <main>
       {sections &&
@@ -158,6 +167,8 @@ export default async function Home() {
             <LogoSection section={section} key={i} />
           ) : section._type === "contact" ? (
             <Contact section={section} key={i} />
+          ) : section._type === "quotes" ? (
+            <QuoteSection section={section} key={i} />
           ) : null;
         })}
     </main>

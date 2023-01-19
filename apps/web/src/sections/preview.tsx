@@ -19,9 +19,9 @@ export const Preview = ({ section }) => {
       else media = image;
     
       return (
-        <section className="relative h-[100vh] text-center flex flex-col justify-between">
+        <section className="relative h-[80vh] md:h-[100vh] text-center flex flex-col justify-between">
     
-          <div className="relative z-10 mx-auto flex w-[674px] flex-col items-center pt-[142px] text-white">
+          <div className="relative z-10 mx-auto flex max-w-[674px] flex-col items-center pt-[142px] text-white">
             <span className="text-body font-bold">{label}</span>
             <h1 className="text-headingThree">{title}</h1>
             <hr className="my-[16px] h-[2px] w-[64px] bg-white text-white" />
